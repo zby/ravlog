@@ -1,7 +1,9 @@
 perl Makefile.PL
 (sudo) make installdeps
 create a local config file, suchs as ravlog_local.pl with your database connect info
-script/create_sql.pl and import the generated SQL schema.
+(or just copy ravlog.pl to ravlog_local.pl and then adjust the database)
+script/create_sql.pl and import one of the generated SQL schemas.
+import sql/ravlog_initial_data.sql
 script/create_login.pl
 script/ravlog_server.pl
 login into http://localhost:3000/

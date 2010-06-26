@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base 'DBIx::Class';
 #use Text::Textile 'textile';
-use Ravlog::Format;
+use RavLog::Format;
 use namespace::autoclean;
 
 __PACKAGE__->load_components( 'TimeStamp', 'InflateColumn::DateTime', 'Core' );

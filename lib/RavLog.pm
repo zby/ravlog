@@ -12,8 +12,6 @@ use Catalyst (
    '-Debug',
    'Static::Simple',
    'ConfigLoader',
-   'Cache::FileCache',
-   'PageCache',
    'Session', 
    'Session::Store::FastMmap', 
    'Session::State::Cookie', 
