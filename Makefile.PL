@@ -40,6 +40,7 @@ requires 'Pod::Xhtml'                                  => '1.57',
 requires 'Syntax::Highlight::Engine::Kate';
 requires 'TeX::Hyphen';
 requires 'Module::Pluggable';
+requires 'IO::String';
 
 test_requires 'Test::XML::Valid';
 
