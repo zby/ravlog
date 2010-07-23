@@ -41,7 +41,6 @@ requires 'Syntax::Highlight::Engine::Kate';
 requires 'TeX::Hyphen';
 requires 'Module::Pluggable';
 
-test_requires 'Test::HTML::Tidy';
 test_requires 'Test::XML::Valid';
 
 catalyst;

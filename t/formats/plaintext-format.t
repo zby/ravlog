@@ -1,6 +1,5 @@
 use Test::More;
 use ok 'RavLog::Format::PlainText';
-use Test::HTML::Tidy;
 use Test::XML::Valid;
 use RavLog::Test::Tidy;
 use strict;
@@ -22,8 +21,6 @@ $output = <<"END";
 <head><title>test</title></head><body>$output</body></html>
 END
 
-my $tidy = RavLog::Test::Tidy->tidy();
-html_tidy_ok( $tidy, $output, 'html is tidy' );
 xml_string_ok( $output, 'html is valid xml' );
 
 like($output, 

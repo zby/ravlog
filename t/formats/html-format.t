@@ -1,7 +1,6 @@
 use Test::More;
 use ok 'RavLog::Format::HTML';
 use RavLog::Test::Tidy;
-use Test::HTML::Tidy;
 use Test::XML::Valid;
 use strict;
 use warnings;
@@ -54,8 +53,6 @@ if (0) {
     print @pretty;
 }
 
-my $tidy = RavLog::Test::Tidy->tidy();
-html_tidy_ok( $tidy, $output, 'html is tidy' );
 xml_string_ok( $output, 'html is valid xml' );
 
 done_testing;
