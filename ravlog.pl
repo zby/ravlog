@@ -9,7 +9,7 @@
   'Model::DB' => {
     schema_class => 'RavLog::Schema',
     connect_info => [
-        'dbi:mysql:dbname=ravlog;user=ravlog_admin;password=rlpw'
+        'dbi:SQLite:dbname=./ravlog.db',
     ],
   }
 }

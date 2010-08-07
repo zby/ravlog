@@ -62,7 +62,7 @@ __PACKAGE__->add_columns(
    "created_at",
    {
       data_type     => "datetime",
-      default_value => "now()",
+      default_value => \'CURRENT_TIMESTAMP',
       is_nullable   => 1,
       size          => undef,
    },
@@ -77,7 +77,6 @@ __PACKAGE__->belongs_to( 'user', 'RavLog::Schema::Result::User', 'user_id' );
 
 sub formatted_body {
     my $self = shift;
-$DB::single=1;
     my $format = $self->format || 'text';
     return RavLog::Format::format_html( $self->body, $format );
 }

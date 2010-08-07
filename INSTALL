@@ -1,10 +1,22 @@
+# these are instructions for starting inititing an SQLite based system
+# for MySQL based one you need to adjust the commands slightly
+
 perl Makefile.PL
 (sudo) make installdeps
-create a local config file, suchs as ravlog_local.pl with your database connect info
-(or just copy ravlog.pl to ravlog_local.pl and then adjust the database)
-script/create_sql.pl and import one of the generated SQL schemas.
-import sql/ravlog_initial_data.sql
+
+# create a local config file, suchs as ravlog_local.pl with your database connect info
+cp ravlog.pl ravlog_local.pl
+
+script/create_sql.pl 
+
+# import one of the generated SQL schemas.
+sqlite3 ravlog.db < RavLog-Schema-1.x-SQLite.sql
+
+# import sql/ravlog_initial_data.sql
+sqlite3 ravlog.db < sql/ravlog_initial_data.sql 
+
 script/create_login.pl
 script/ravlog_server.pl
-login into http://localhost:3000/
+
+# login into http://localhost:3000/
 

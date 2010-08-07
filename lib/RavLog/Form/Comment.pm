@@ -7,6 +7,9 @@ with 'HTML::FormHandler::Render::Simple';
 # with 'HTML::FormHandler::TraitFor::Captcha';
 has '+item_class' => ( default => 'Comment' );
 
+has '+name' => ( default => 'comment_form' );
+has '+html_prefix' => ( default => 1 );
+
 has 'user' => ( is => 'rw' );
 has 'article_id' => ( is => 'rw' );
 has 'remote_ip' => ( is => 'rw' );
