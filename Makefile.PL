@@ -41,6 +41,7 @@ requires 'Syntax::Highlight::Engine::Kate';
 requires 'TeX::Hyphen';
 requires 'Module::Pluggable';
 requires 'IO::String';
+requires 'Email::Valid';
 
 test_requires 'Test::XML::Valid';
 
